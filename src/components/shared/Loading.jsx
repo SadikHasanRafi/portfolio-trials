@@ -8,23 +8,21 @@ export default function Loading({ onComplete }) {
   useEffect(() => {
     let index = 0;
     index++;
+    let interval2 = null;
 
     const interval = setInterval(() => {
       setText(fullText.substring(0, index));
-      let interval2 = null;
       if (index === fullText.length + 1) {
         interval2 = setTimeout(() => {
           onComplete();
-        }, 1000);
-        index = 0;
-        setText("");
+        }, 700);
       }
-      clearInterval(interval2);
       index++;
     }, 200);
 
     return () => {
       //   onComplete()
+      clearInterval(interval2);
       console.log("loading complete");
       clearInterval(interval);
     };
