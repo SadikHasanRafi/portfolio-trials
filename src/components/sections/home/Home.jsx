@@ -1,8 +1,11 @@
+import { RevealOnScroll } from "../../RevealOnScroll";
+
 export default function Home() {
   const border = "";
 
   return (
     <section id="home" className={`min-h-screen flex relative items-center justify-center ${border}`}>
+      <RevealOnScroll>
       <div className="text-center z-10 px-4">
         
         <h1 className="text-5xl md:text-7xl font-bold mb-6 gradient-text leading-right bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent leading-right"> Hi, I'm Pedro Tech.</h1>
@@ -23,6 +26,7 @@ export default function Home() {
       </div>
 
       </div>
+      </RevealOnScroll>
     </section>
   );
 }
