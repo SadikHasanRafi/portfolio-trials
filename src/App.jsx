@@ -3,9 +3,11 @@ import "./App.css";
 import Loading from "./components/shared/Loading";
 import Navbar from "./components/navbar/Navbar";
 import MobileMenu from "./components/navbar/MobileMenu";
-import Home from "./components/sections/Home/Home";
+// import Home from "./components/sections/Home/Home";
 import About from "./components/sections/About/About";
 import Project from "./components/sections/projects/Project";
+import Contact from "./components/sections/contact/Contact";
+import Home from "./components/sections/home/Home";
 
 function App() {
   const [onComplete, setOnComplete] = useState(false);
@@ -20,6 +22,7 @@ function App() {
         <Home />
         <About />
         <Project />
+        <Contact></Contact>
       </div>
     </>
   );
